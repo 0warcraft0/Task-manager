@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task" required>
+            <input type="text" id="task-category" placeholder="Category">
+            <input type="date" id="task-due-date">
+            <select id="task-priority">
+                <option value="" disabled selected>Select priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-list">
+            <!-- Tasks will be listed here -->
+        </ul>
+    </div>
+    <script src="task-manager.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,136 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #333; 
+    color: white; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444; 
+}
+
+h1 {
+    text-align: center;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input,
+#task-category,
+input[type="date"],
+select {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #555;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#task-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #555;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+#task-list li:hover {
+    transform: translateY(-2px);
+}
+
+.task .task-description {
+    font-weight: bold;
+}
+
+.task .task-category,
+.task .task-date,
+.task .task-priority {
+    margin-left: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+#task-list li.task.low {
+    background-color: #99cc99;
+    color: white;
+}
+
+#task-list li.task.medium {
+    background-color: #e6b95f;
+    color: white;
+}
+
+#task-list li.task.high {
+    background-color: #ff6666;
+    color: white;
+}
+
+.delete-task {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+.delete-task:hover {
+    color: #ff4444;
+}
+
+#task-input::placeholder,
+#task-category::placeholder {
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(arrow-down-icon-path) no-repeat right #555;
+    background-size: 12px;
+}
